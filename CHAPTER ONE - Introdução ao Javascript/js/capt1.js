@@ -191,3 +191,49 @@ function fatorial(n) { // Uma função para calcular fatoriais
 }
 
 console.log(fatorial(3)); // 3 = 3.2.1 = 6
+
+function fatorial2(n) { // Outra versão, usando um laço diferente
+    var i, product = 1; // Começa com 1
+    for(i=2; i <= n; i++) // incrementa i automaticamente, de 2 até n
+    product *= i; // de 1 linha
+
+    return product; // retorna o fatorial
+
+}
+
+console.log(fatorial2(3));
+
+// Define uma função construtora para inicializar um novo objeto Point
+
+class Point {
+    constructor(x, y) {
+        //maiúsculas
+        this.x = x; // A palavra-chave this é o novo objeto que está sendo inicializado
+
+        // Armazena os argumentos da função como propriedades do                   
+        this.y = y; // objeto
+    }
+}                       // Nenhum return é necessário
+
+// Use uma função construtora com a palavra-chave "new" para criar instâncias
+var p = new Point(1, 1); //O ponto geométrico (1, 1)
+
+// Define métodos para objetos Point atribuindo-os ao objeto 
+// prototype associado à função construtora
+
+Point.prototype.r = function () {
+    return Math.sqrt ( // Retorna a raiz quadrada de x² + y²
+        this.x * this.x + // Este é o objeto Point no qual o método...
+        this.y * this.y // ... é chamado
+    );
+};
+
+// Agora o objeto Point b (e todos os futuros objetos Point) herda o método r()
+p.r(); // 1,414...
+
+num = 2
+var quadrado = function(num) {
+    return num*num;
+};
+
+console.log(quadrado)
